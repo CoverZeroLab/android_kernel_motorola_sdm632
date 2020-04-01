@@ -6,7 +6,7 @@
  * Copyright (C) 2006 David Gibson, IBM Corporation.
  */
 
-#include "libfdt_env.h"
+#include "../../../include/linux/libfdt_env.h"
 #include "fdt.h"
 
 #define FDT_FIRST_SUPPORTED_VERSION	0x02
