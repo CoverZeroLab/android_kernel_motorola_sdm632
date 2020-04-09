@@ -37,7 +37,7 @@ static int float_to_int(uint32_t x)
 /*
  * check the container file
 */
-enum tfa_error tfa_load_cnt(void *cnt, int length) 
+enum Tfa98xx_Error tfa_load_cnt(void *cnt, int length) 
 {
 	nxpTfaContainer_t  *cntbuf = (nxpTfaContainer_t  *)cnt;
 
