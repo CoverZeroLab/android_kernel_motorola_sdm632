@@ -41,7 +41,7 @@
 *  - tfa_error_bad_param invalid parameter
 *
 */
-enum Tfa98xx_Error tfa_load_cnt(void *cnt, int length);
+enum tfa_error tfa_load_cnt(void *cnt, int length);
 
 /**
  * Return the descriptor string
