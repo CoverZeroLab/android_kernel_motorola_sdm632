@@ -185,7 +185,7 @@ int tfa_dev_probe(int slave, struct tfa_device *tfa);
  *  @param vstep the selected vstep to use
  *  @return tfa_error enum
  */
-enum tfa_error tfa_dev_start(struct tfa_device *tfa, int profile, int vstep);
+enum Tfa98xx_Error tfa_dev_start(struct tfa_device *tfa, int profile, int vstep);
 
 
 /**
@@ -199,7 +199,7 @@ enum tfa_error tfa_dev_start(struct tfa_device *tfa, int profile, int vstep);
  *  @param tfa struct = pointer to context of this device instance
  *  @return tfa_error enum
  */
-enum tfa_error tfa_dev_stop(struct tfa_device *tfa);
+enum Tfa98xx_Error tfa_dev_stop(struct tfa_device *tfa);
 
 /**
  * This interface allows a device/type independent fine grained control of the
@@ -220,7 +220,7 @@ enum tfa_error tfa_dev_stop(struct tfa_device *tfa);
  *  @param state struct = desired device state after function return
  *  @return tfa_error enum
  */
-enum tfa_error tfa_dev_set_state(struct tfa_device *tfa, enum tfa_state state);
+enum Tfa98xx_Error tfa_dev_set_state(struct tfa_device *tfa, enum tfa_state state);
 
 /**
  * Retrieve the current state of this instance in an active way.
@@ -258,7 +258,7 @@ int tfa_dev_mtp_get(struct tfa_device *tfa, enum tfa_mtp item);
 /**
  *
  */
-enum tfa_error tfa_dev_mtp_set(struct tfa_device *tfa, enum tfa_mtp item, int value);
+enum Tfa98xx_Error tfa_dev_mtp_set(struct tfa_device *tfa, enum tfa_mtp item, int value);
 
 
 //irq
