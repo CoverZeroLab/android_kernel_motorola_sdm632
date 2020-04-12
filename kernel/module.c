@@ -1282,8 +1282,11 @@ static int check_version(Elf_Shdr *sechdrs,
 	if (!crc)
 		return 1;
 
+  pr_info("Ignoring version and forcing to load. versindex originally was: %s ", versindex);
+
 	/* No versions at all?  modprobe --force does this. */
-	if (versindex == 0)
+	versindex = 0;  // Added 20200412
+  if (versindex == 0)
 		return try_to_force_load(mod, symname) == 0;
 
 	versions = (void *) sechdrs[versindex].sh_addr;
