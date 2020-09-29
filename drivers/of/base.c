@@ -735,8 +735,7 @@ EXPORT_SYMBOL(of_get_next_child);
  *      This function is like of_get_next_child(), except that it
  *      automatically skips any disabled nodes (i.e. status = "disabled").
  */
-struct device_node *of_get_next_available_child(const struct device_node *node,
-	struct device_node *prev)
+struct device_node *of_get_next_available_child(const struct device_node *node, struct device_node *prev)
 {
 	struct device_node *next;
 	unsigned long flags;
